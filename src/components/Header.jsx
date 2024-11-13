@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-
 function Header() {
   // State to manage dark mode
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Function to toggle dark mode
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode); // Toggle the state of dark mode
     document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
   };
 

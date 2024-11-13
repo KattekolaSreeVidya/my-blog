@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './LikeButton.css';
+import './LikeButton.module.css';
 
 function LikeButton({ initialLikes, onLikeChange }) {
   const [likes, setLikes] = useState(initialLikes);
