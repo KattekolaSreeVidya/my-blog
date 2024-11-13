@@ -1,0 +1,48 @@
+.like-button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  .like-button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+  }
+  
+  .like-button--liked {
+    color: red;
+  }
+  
+  .like-button__icon {
+    font-size: 24px;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .like-button__icon.heart-animation {
+    animation: heart-pulse 0.8s infinite;
+  }
+  
+  .like-button__count {
+    font-size: 16px;
+  }
+  
+  @keyframes heart-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
