@@ -1,4 +1,3 @@
-// src/components/BlogPost/BlogPost.jsx
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import LikeButton from '../LikeButton/LikeButton';
@@ -7,7 +6,7 @@ import { calculateReadTime } from '../../utils/readTime';
 import ReadMore from '../ReadMore/ReadMore'; // Importing the new ReadMore component
 import './BlogPost.module.css';
 
-const BlogPost = ({ id, title, content, author, date }) => {
+const BlogPost = ({ id, title, content, author, date, initialLikes, comments, onLike, onComment }) => {
   const [readTime, setReadTime] = useState(0);
 
   useEffect(() => {
@@ -29,8 +28,15 @@ const BlogPost = ({ id, title, content, author, date }) => {
         <ReadMore content={content} /> {/* Using ReadMore component */}
       </div>
 
-      <LikeButton initialLikes={0} />
-      <CommentSection postId={id} />
+      <LikeButton 
+        likes={initialLikes} 
+        onLike={() => onLike(id)} 
+      />
+      <CommentSection 
+        postId={id} 
+        comments={comments} 
+        onComment={(comment) => onComment(id, comment)} 
+      />
     </article>
   );
 };
@@ -40,7 +46,11 @@ BlogPost.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired
+  date: PropTypes.string.isRequired,
+  initialLikes: PropTypes.number.isRequired,
+  comments: PropTypes.array.isRequired,
+  onLike: PropTypes.func.isRequired,
+  onComment: PropTypes.func.isRequired,
 };
 
 export default BlogPost;

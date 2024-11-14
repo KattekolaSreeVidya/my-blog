@@ -1,0 +1,22 @@
+.blog-search {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .search-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .search-results-count {
+    font-size: 14px;
+    color: #555;
+  }
+  

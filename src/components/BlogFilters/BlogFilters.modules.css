@@ -1,0 +1,28 @@
+.blog-filters {
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .filter-group {
+    margin-bottom: 15px;
+  }
+  
+  .filter-group label {
+    font-weight: bold;
+  }
+  
+  .filter-group select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .tags-filter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag-checkbox {
+    margin-right: 10px;
+  }
+  

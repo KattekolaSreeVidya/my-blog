@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import './CommentSection.module.css';
 
 function CommentSection({ postId }) {
   const [comments, setComments] = useState([]);
