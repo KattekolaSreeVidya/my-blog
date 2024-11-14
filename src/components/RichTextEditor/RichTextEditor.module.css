@@ -1,0 +1,47 @@
+.rich-editor {
+    margin-bottom: 20px;
+  }
+  
+  .rich-editor__toolbar {
+    margin-bottom: 10px;
+  }
+  
+  .toolbar-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .toolbar-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .rich-editor__content {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 200px;
+    resize: vertical;
+  }
+  
+  .rich-editor__content.error {
+    border-color: #e74c3c;
+  }
+  
+  .rich-editor__content:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
