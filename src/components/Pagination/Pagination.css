@@ -1,0 +1,28 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    padding: 8px 12px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .page-numbers {
+    display: flex;
+  }
+  
+  .page-number {
+    padding: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .page-number.active {
+    font-weight: bold;
+    color: blue;
+  }
+  
