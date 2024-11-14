@@ -1,9 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+// Sidebar.jsx
+
+import { useState } from 'react';
 import './Sidebar.css';
 
 function Sidebar() {
-  const navigate = useNavigate();
-  
+  const [isOpen, setIsOpen] = useState(false);
+
   const categories = [
     'Technology',
     'Lifestyle',
@@ -18,17 +20,20 @@ function Sidebar() {
     { id: 3, title: 'Mastering CSS Grid' }
   ];
 
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+      <button onClick={toggleSidebar} className="sidebar__toggle">
+        {isOpen ? 'Close Sidebar' : 'Open Sidebar'}
+      </button>
+
       <section className="sidebar__section">
         <h3 className="sidebar__title">Categories</h3>
         <ul className="sidebar__list">
           {categories.map(category => (
             <li key={category} className="sidebar__item">
-              <button 
-                onClick={() => navigate(`/posts?category=${category.toLowerCase()}`)}
-                className="sidebar__link"
-              >
+              <button className="sidebar__link">
                 {category}
               </button>
             </li>
@@ -41,10 +46,7 @@ function Sidebar() {
         <ul className="sidebar__list">
           {recentPosts.map(post => (
             <li key={post.id} className="sidebar__item">
-              <button
-                onClick={() => navigate(`/posts/${post.id}`)}
-                className="sidebar__link"
-              >
+              <button className="sidebar__link">
                 {post.title}
               </button>
             </li>

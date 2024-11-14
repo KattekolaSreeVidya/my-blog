@@ -55,7 +55,7 @@ function BlogList({ posts }) {
   };
 
   if (loading) {
-    return <div className="loading">Loading...</div>; // Show loading spinner while data is loading
+    return <div className="loading">Loading...</div>;
   }
 
   return (
@@ -100,11 +100,10 @@ function BlogList({ posts }) {
       <select
         value={itemsPerPage}
         onChange={handleItemsPerPageChange}
-        className="items-per-page-select"
+        className="items-per-page"
       >
-        <option value={5}>5 items per page</option>
-        <option value={10}>10 items per page</option>
-        <option value={15}>15 items per page</option>
+        <option value={5}>5 posts per page</option>
+        <option value={10}>10 posts per page</option>
       </select>
     </div>
   );

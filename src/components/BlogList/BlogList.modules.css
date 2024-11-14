@@ -1,3 +1,5 @@
+/* BlogList.css */
+
 /* BlogList container */
 .blog-list {
     display: flex;
@@ -20,7 +22,8 @@
   
   .blog-list .blog-post:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e6f7ff;
   }
   
   /* BlogPost title */

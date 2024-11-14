@@ -1,10 +1,9 @@
-import { NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -13,9 +12,7 @@ function Navigation() {
     { path: '/profile', label: 'Profile' }
   ];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <nav className="navigation">
@@ -29,7 +26,7 @@ function Navigation() {
         aria-expanded={isMenuOpen}
         aria-label="Toggle navigation"
       >
-        <span className="navigation__toggle-icon"></span>
+        <span className="navigation__toggle-icon">☰</span>
       </button>
 
       <ul className={`navigation__menu ${isMenuOpen ? 'is-open' : ''}`}>

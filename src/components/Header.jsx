@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.modules.css';
 
-function Header() {
-  // State to manage dark mode
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Function to toggle dark mode
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode); // Toggle the state of dark mode
-    document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
-  };
-
+function Header({ toggleDarkMode }) {
   return (
-    <header className={`blog-header ${isDarkMode ? 'dark-mode' : ''}`}>
+    <header className="blog-header">
       <h1>My Awesome Blog</h1>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/create-post">Create Post</Link></li>
         </ul>
       </nav>
       <button onClick={toggleDarkMode} className="dark-mode-toggle">
-        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        Toggle Dark Mode
       </button>
     </header>
   );
