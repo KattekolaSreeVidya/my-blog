@@ -1,3 +1,4 @@
+/* Base Header Styles */
 .blog-header {
   padding: 1rem;
   background-color: #f8f9fa;
@@ -19,4 +20,50 @@
 .blog-header nav a {
   text-decoration: none;
   color: #666;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.blog-header nav a:hover {
+  color: #333;
+  transform: scale(1.1); /* Hover effect with slight scaling */
+}
+
+/* Dark Mode Styles */
+.dark-mode .blog-header {
+  background-color: #333;
+  border-bottom: 1px solid #444;
+}
+
+.dark-mode .blog-header h1 {
+  color: #f8f9fa;
+}
+
+.dark-mode .blog-header nav a {
+  color: #bbb;
+}
+
+.dark-mode .blog-header nav a:hover {
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .blog-header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .blog-header nav a {
+    font-size: 0.9rem;
+  }
 }

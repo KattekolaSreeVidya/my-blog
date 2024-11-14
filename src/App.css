@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +41,39 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-input,
+.category-select,
+.author-select,
+.items-per-page-select {
+  margin: 10px;
+  padding: 8px;
+}
+
+.pagination-button,
+.page-number {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+}
+
+.page-number.active {
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
