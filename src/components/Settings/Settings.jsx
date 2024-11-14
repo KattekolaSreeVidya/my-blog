@@ -1,10 +1,16 @@
 import { useTheme } from '../../contexts/ThemeContext';
 import { usePreferences } from '../../contexts/PreferencesContext';
 import './Settings.css';
+import { useEffect } from 'react';
 
 function Settings() {
   const { theme, toggleTheme } = useTheme();
   const { preferences, updatePreference, resetPreferences } = usePreferences();
+
+  useEffect(() => {
+    // Apply the theme to the document body or a specific component
+    document.body.setAttribute('data-theme', theme);
+  }, [theme]); // Update theme on change
 
   return (
     <div className="settings">
